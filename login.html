@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 100vw;
+            min-height: 100vh;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .main {
+            width: 19vw;
+            border: 2px solid red;
+            margin: 50px auto;
+            padding: 94px;
+        }
+        input{
+            margin: 10px 0;
+        }
+        button{
+            padding: 8px 24px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Welcome to login</h1>
+        <hr />
+        <div class="main">
+            <div class="cred">
+                Username: <br />
+                <input type="text" name="" id="usname" /><br />
+                Password: <br />
+                <input type="password" name="" id="psword" /><br />
+                <button onclick="login()">LOGIN</button>
+            </div>
+        </div>
+    </div>
+</body>
+    <script>
+        function login(){
+             let usname = document.getElementById("usname").value;
+             let psword = document.getElementById("psword").value;
+             if(usname=="rahul" && psword=="123"){
+                 location.assign("temporary.html");
+             }else{
+                 window.alert("LOGIN FAILED");
+             }
+        }
+    </script>
+</html>
